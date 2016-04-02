@@ -107,7 +107,15 @@ h4 {
 .wrong {
   color: #FF7F7F;
   font-weight: 300;
+  -webkit-animation:ease showSweetAlert 0.3s;
+  animation:ease showSweetAlert 0.3s;
 }
+
+.right-id {
+  -webkit-animation: showSweetAlert 0.3s;
+  animation: showSweetAlert 0.3s;
+}
+
 .right {
   color: #1DC08D;
   font-weight: 300;
@@ -115,7 +123,11 @@ h4 {
 
 .application {
   text-align: center;
+  -webkit-animation: showSweetAlert 0.3s;
+  animation: showSweetAlert 0.3s;
+  min-height: 100%;
 }
+
 
 .scout-logo {
 
@@ -126,6 +138,7 @@ h4 {
   width: 100%;
   height: 134px;
   margin-top: 100px;
+
 
 }
 
@@ -141,7 +154,7 @@ h4 {
   color:#453145;
   display: inline-block;
   height: 24px;
-  margin: 10px 10px 10px 10px;
+  margin: 14px 10px 10px 10px;
   background-color: #f8f8f8;
   border: none;
   min-width:60px;
@@ -149,7 +162,13 @@ h4 {
   line-height: 24px;
   padding-bottom: 30px;
   font-weight: 300;
-  transform: translateY(-2px);
+  border-radius: 5px;
+
+  -webkit-animation: showSweetAlert 0.2s;
+  animation: showSweetAlert 0.2s;
+}
+.responsive-button {
+  min-height: 60px;
 }
 
 .enter-button:hover {
@@ -158,4 +177,47 @@ h4 {
 
 .enter-button:active {
   color:#333;
+}
+
+footer {
+  color:#6C676C;
+  font-weight: 200;
+  bottom:0px;
+  margin-top: 10vh;
+  position: relative;
+}
+
+footer p{
+  text-align: center;
+}
+
+.status {
+  min-height: 100px;
+}
+
+
+/*  Responsive  */
+
+@media screen and (max-width:600px){
+
+
+  h1 {
+    font-size:23px;
+  }
+  h2 {
+    font-size:19px;
+    padding-left: 15%;
+    padding-right:15%;
+  }
+  .enter-button {
+    margin-top: 20px;
+    min-width: 130px;
+  }
+  footer {
+    margin-top: 0px;
+    font-size: 10px;
+   transform: translateY(-40px);
+  }
+
+
 }
