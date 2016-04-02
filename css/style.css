@@ -104,7 +104,14 @@ h4 {
   cursor: pointer;
 }
 
-
+.wrong {
+  color: #FF7F7F;
+  font-weight: 300;
+}
+.right {
+  color: #1DC08D;
+  font-weight: 300;
+}
 
 .application {
   text-align: center;
@@ -131,6 +138,7 @@ h4 {
 }
 
 .enter-button {
+  color:#453145;
   display: inline-block;
   height: 24px;
   margin: 10px 10px 10px 10px;

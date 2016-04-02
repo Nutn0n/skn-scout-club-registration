@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
   <head>
     <meta charset="utf-8">
      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -11,19 +11,22 @@
      <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="css/icon.css">
   </head>
-  <body>
+  <body ng-app="ScoutSelection">
   <div class="back-arrow"><a href="http://skn.press/scoutclub" class="back"><span class="ion-ios-arrow-left"></span> กลับหน้าหลัก</a></div>
-    <div class="application">
+    <div ng-controller="SelectionContoller" class="application">
 
         <span class="scout-logo"></span>
         <h1>ประกาศผลการคัดเลือก</h1>
         <h2>สต๊าฟกิจกรรมลูกเสือ ฐานกิจกรรมลูกเสือ</h2>
 
-        <input class="id-enter" type="text" placeholder="กรุณากรอกเลขประจำตัว" ng-model="id"></input><button class="enter-button" ng-click="">ตรวจสอบ</button>
+        <input ng-init="PlaceHolderMessage= 'กรุณากรอกเลขประจำตัว'" class="id-enter" type="text" placeholder="{{PlaceHolderMessage}}" maxlength="5" ng-model="StudentID"></input>
+        <button class="enter-button" ng-click="check(StudentID)">ตรวจสอบ</button>
 
         <h4>กรอกเลขประจำตัวนักเรียนที่ได้ระบุในใบสมัคร</h4>
-
-
+      <div ng-if="StudentID.length != 0">
+        <h4 ng-if="StudentID > 10000">เลขประจำตัวของท่านคือ <span class="right">{{StudentID}} <span class="ion-ios-checkmark"></span></span></h4>
+        <h4 class="wrong" ng-if="StudentID.length < 5 ">เลขประจำตัวไม่ถูกต้อง</h4>
+      </div>
 
   </div>
   </body>
